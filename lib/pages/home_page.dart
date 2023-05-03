@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:english_memory/models/english_today.dart';
+import 'package:english_memory/pages/control_page.dart';
 import 'package:english_memory/values/app_assets.dart';
 import 'package:english_memory/values/app_colors.dart';
 import 'package:english_memory/values/app_styles.dart';
@@ -248,7 +249,12 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.symmetric(vertical: 24),
                   child: AppButton(
                     label: 'Your control',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const ControlPage()));
+                    },
                   ),
                 ),
               ],
